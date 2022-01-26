@@ -1,0 +1,422 @@
+/*===========================================================================================
+||||||||||||||||||||||||||||||CLEARFIX PER PULIRE IL FLOAT|||||||||||||||||||||||||||||||||||
+===========================================================================================*/
+
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    zoom: 1;
+}
+
+/*===========================================================================================
+|||||||||||||||||||||||||||||||||||||||||BOX SIZING||||||||||||||||||||||||||||||||||||||||||
+===========================================================================================*/
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/*===========================================================================================
+||||||||||||||||||||||||||||||||||||||||STILE CUSTOM|||||||||||||||||||||||||||||||||||||||||
+===========================================================================================*/
+
+/*
+I Font che useremo nella pagina sono: 
+    - font-family: 'Roboto Slab', serif;
+    - font-family: 'Open Sans Condensed', sans-serif;
+La Palette invece:
+    - rosso chiaro: #DA2F1E;
+    - rosso scuro:  #540d02;
+*/
+
+
+/*================ GENERALI ================*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    color: #333;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.2s linear;
+}
+
+.btn:hover {
+    background-color: #dae12a;
+}
+
+.big-title {
+    color: #dae12a;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 700;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+.subtitle a {
+    color: #dae12a;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+p {
+    line-height: 25px;
+}
+
+/*================= HEADER =================*/
+.main-header {
+    width: 90%;
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+
+.menu-list li {
+    list-style: none;
+    margin: 20px;
+    display: inline-block;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-active a,
+.menu-list a:hover {
+    color: #dae12a;
+}
+
+.flex-control-nav {
+    display: none;
+}
+
+.flexslider {
+    margin: 0;
+}
+
+/*================= ICON SECTION =================*/
+.icon-section {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.icon-section figure {
+    background-color: #2c3e50;
+    padding: 30px;
+    margin: 0;
+    border-left: 2px solid #fff;
+    height: 150px;
+    transition: all 0.15s linear;
+}
+
+.icon-section figure:hover {
+    border-bottom: 10px solid #dae12a;
+}
+
+.icon-section img {
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon-section figcaption {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*================= COWORKING SECTION =================*/
+.coworking-section {
+    width: 70%;
+    margin: 70px auto;
+}
+
+.coworking-section h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #666;
+}
+
+.text-column {
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+}
+
+.text-column span {
+    color: #dae12a;
+    font-weight: 700;
+}
+
+.coworking-section img {
+    float: right;
+    width: 45%;
+}
+
+/*================= ULTIME NOVITA SECTION =================*/
+.section-news {
+    width: 70%;
+    margin: 70px auto;
+}
+
+.news {
+    margin: 65px auto;
+}
+
+.news img {
+    width: 45%;
+    float: left;
+}
+
+.text-column-r {
+    width: 50%;
+    float: right;
+    margin-top: 20px;
+}
+
+.section-news h2 {
+    color: #dae12a;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.section-news h3 {
+    color: #dae12a;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.animazione {
+    background-color: red;
+}
+
+
+/* ================== section info ================= */
+.section-info {
+    width: 90%;
+    display: grid;
+    margin: 100px auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
+
+.section-info figure {
+    padding: 10%;
+    text-align: center;
+    margin: 0;
+}
+
+.section-info figure h4 {
+    font-size: 1.5em;
+}
+
+.section-info figure figcaption {
+    margin-bottom: 50px;
+    line-height: 2;
+}
+
+.section-info figure:first-child,
+.section-info figure:nth-child(2) {
+    border-bottom: 1px solid #999;
+    border-right: 1px solid #999
+}
+
+.section-info figure:nth-child(3) {
+    border-bottom: 1px solid #999;
+}
+
+.section-info figure:nth-child(4),
+.section-info figure:nth-child(5) {
+    border-right: 1px solid #999;
+}
+
+.section-info figure i {
+    font-size: 5em;
+    color: #dae12a;
+}
+
+/* ============== sezione galleria ================= */
+.gallery img {
+    width: 100%;
+}
+
+.gallery {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* ============= sezione partners ============= */
+.partners-container {
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.partners-container img {
+    width: 15%;
+}
+
+/* =================== cta ================= */
+
+.call-to-action {
+    display: grid;
+    grid-template-areas: "a b";
+    width: 100%;
+    color: white;
+}
+
+.btn-outline {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.2s linear;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #dae12a;
+}
+
+.coworking-call {
+    grid-area: a;
+    background-color: #dae12a;
+    padding: 50px 100px;
+}
+
+.agency-call {
+    grid-area: b;
+    background-color: #2c3e50;
+    padding: 50px 100px;
+}
+
+
+/* ================ footer ============ */
+footer {
+    width: 100%;
+    background-color: #202020;
+    color: #f2f2f2;
+}
+
+.footer-section {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+footer h3 {
+    color: #dae12a;
+    font-size: 1.5;
+    text-transform: uppercase;
+}
+
+.footer01 p {
+    display: inline-block;
+}
+
+.footer03 img {
+    width: 60%;
+}
+
+.footer01 i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #dae12a;
+}
+
+.footer01 i::before {
+    margin: 0;
+}
+
+.footer02 a {
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+}
+
+.footer02 .news-footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.footer02 img {
+    width: 30%;
+}
+
+.footer02 .news-footer h5 {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.footer03 a {
+    text-decoration: none;
+}
+
+.footer03 i {
+    font-size: 3em;
+    color: white;
+    margin-left: 0;
+}
+
+.footer04 {}
