@@ -134,6 +134,19 @@ p {
     margin: 0;
 }
 
+.nav-mobile {
+    color: #202020;
+    text-align: right;
+}
+
+.displayBlock {
+    display: block;
+}
+
+.displayNone {
+    display: none;
+}
+
 /*================= ICON SECTION =================*/
 .icon-section {
     display: flex;
@@ -287,13 +300,11 @@ p {
 }
 
 .gallery {
-    margin: 0 auto;
+    margin: 100px auto;
     width: 90%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    margin-top: 100px;
-    margin-bottom: 100px;
 }
 
 /* ============= sezione partners ============= */
@@ -421,7 +432,7 @@ footer h3 {
     margin-left: 0;
 }
 
-.footer04 input[type=email]{
+.footer04 input[type=email] {
     width: 100%;
     padding: 15px;
     margin: 20px 0;
@@ -430,7 +441,7 @@ footer h3 {
     border-radius: 5px;
 }
 
-.footer04 input[type=email]:focus::placeholder{
+.footer04 input[type=email]:focus::placeholder {
     color: white;
 }
 
@@ -439,12 +450,148 @@ footer h3 {
     width: 100%;
     border: 0;
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 
-.footer04 a{
-    color:#dae12a;
+.footer04 a {
+    color: #dae12a;
 }
 
-@media screen {
-    
+/* ================= media queries =================== */
+@media (max-width: 1000px) {
+
+    /* =========== menu ============ */
+    .nav-mobile {
+        text-align: right;
+        margin: 10px 15px 0 0;
+        transition: all linear 200ms;
+    }
+
+    .nav-mobile:hover {
+        color: #dae12a;
+    }
+
+    .menu-list li {
+        display: block;
+        text-align: right;
+    }
+
+    .main-header {
+        align-items: flex-start;
+    }
+
+    .main-header img {
+        width: 50%;
+    }
+
+    .text-column {
+        float: none;
+        width: 100%;
+    }
+
+    .coworking-section img {
+        margin-top: 50px;
+        float: none;
+        width: 100%;
+    }
+
+    .news img {
+        float: none;
+        width: 100%;
+    }
+
+    .text-column-r {
+        float: none;
+        width: 100%;
+    }
+
+    .footer-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .icon-section img {
+        width: 70%;
+    }
+
+    .section-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-info figure {
+        border: 0 !important;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 50px auto;
+    }
+
+    .partners-container {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .partners-container img {
+        width: 40%;
+    }
+
+    .call-to-action {
+        display: block;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .footer-section {
+        padding: 50px 0;
+        display: block;
+        text-align: center;
+    }
+
+    .footer02 .news-footer {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+    }
+
+    .news-footer h5 {
+        font-size: 14px;
+    }
+
+    .icon-section {
+        width: 100%;
+        flex-direction: column;
+        border: 0;
+    }
+
+    .icon-section img {
+        width: 10%;
+    }
+
+    .icon-section figure {
+        border: 0;
+    }
+
+    .section-info {
+        display: block;
+    }
+
+    .gallery {
+        display: block;
+    }
+
+    .partners-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .call-to-action div {
+        padding: 40px;
+    }
 }
