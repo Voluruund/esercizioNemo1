@@ -386,10 +386,12 @@ footer h3 {
     margin: 0;
 }
 
-.footer02 a {
+.footer02 a,
+.footer04 a {
     text-decoration: none;
     color: white;
     width: fit-content;
+    margin: 0;
 }
 
 .footer02 .news-footer {
@@ -419,4 +421,30 @@ footer h3 {
     margin-left: 0;
 }
 
-.footer04 {}
+.footer04 input[type=email]{
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0;
+    outline: none;
+    color: black;
+    border-radius: 5px;
+}
+
+.footer04 input[type=email]:focus::placeholder{
+    color: white;
+}
+
+.footer04 .btn {
+    display: block;
+    width: 100%;
+    border: 0;
+    margin-top: 20px;
+}
+
+.footer04 a{
+    color:#dae12a;
+}
+
+@media screen {
+    
+}
